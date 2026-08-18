@@ -1,18 +1,21 @@
 # HOME
 
-A basic static website boilerplate, deployed via GitHub Pages.
+Landing page for HOME, a research platform for remote clinical monitoring. Static HTML/CSS/JS, deployed via GitHub Pages.
 
 ## Structure
 
-- `index.html` — page markup
+- `index.html` — page markup (Hero, About, Platform, Team, Contact sections)
 - `style.css` — styling
-- `script.js` — behavior
+- `script.js` — behavior (footer year, mobile nav toggle, contact form)
 
-## Deploying with GitHub Pages
+## Running locally
 
-1. Go to the repo's **Settings > Pages**.
-2. Under "Build and deployment", set **Source** to `Deploy from a branch`.
-3. Choose the `main` branch and `/ (root)` folder, then save.
-4. The site will be published at `https://<username>.github.io/HOME/`.
+```
+python3 -m http.server 8000
+```
 
-edit
+Then visit `http://localhost:8000/`.
+
+## Deployment
+
+Pushes to `main` deploy automatically via GitHub Pages. Live at `https://thomaskleinknecht.com/HOME/`.

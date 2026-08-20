@@ -18,4 +18,4 @@ Then visit `http://localhost:8000/`.
 
 ## Deployment
 
-Pushes to `main` deploy automatically via GitHub Pages. Live at `https://thomaskleinknecht.com/HOME/`.
+Pushes to `main` deploy automatically via GitHub Pages. Live at URL

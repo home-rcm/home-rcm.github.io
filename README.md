@@ -18,4 +18,5 @@ Then visit `http://localhost:8000/`.
 
 ## Deployment
 
-Pushes to `main` deploy automatically via GitHub Pages. Live at URL
+Pushes to `main` deploy automatically via GitHub Pages. Live at home-rcm.github.io
+

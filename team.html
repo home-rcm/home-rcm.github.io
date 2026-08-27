@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team &mdash; HOME</title>
+  <meta name="description" content="Meet the HOME research team." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html" class="nav__brand">HOME</a>
+      <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__menu" id="navMenu">
+        <li><a href="about.html">About</a></li>
+        <li><a href="platform.html">Platform</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section" id="team">
+      <div class="container">
+        <h2 class="section__title">Team</h2>
+        <p class="section__intro">
+          Our team brings together clinicians, scientists, and engineers from partner
+          institutions across Toronto.
+        </p>
+        <div class="grid grid--3">
+          <div class="card card--team">
+            <img class="avatar" src="Images/05091-robert-wu-214p-4.jpg" alt="Robert Wu" loading="lazy" />
+            <h3>Robert Wu</h3>
+            <p class="card__role">Clinician Investigator, University Health Network</p>
+            <p class="card__bio">Dr. Wu&rsquo;s research interests focus on the development and evaluation of information technology to improve patient care.</p>
+          </div>
+          <div class="card card--team">
+            <img class="avatar" src="Images/68fde-andrea-gershon-1.png" alt="Andrea Gershon" loading="lazy" />
+            <h3>Andrea Gershon</h3>
+            <p class="card__role">Scientist, Sunnybrook Research Institute</p>
+            <p class="card__bio">Dr. Gershon&rsquo;s research focuses on respiratory disease health outcomes, health services, quality of care, drug safety and effectiveness, and knowledge translation.</p>
+          </div>
+          <div class="card card--team">
+            <img class="avatar" src="Images/e031e-alex-mariakakis-portrait.jpg" alt="Alex Mariakakis" loading="lazy" />
+            <h3>Alex Mariakakis</h3>
+            <p class="card__role">Associate Professor, Computer Science, University of Toronto</p>
+            <p class="card__bio">Dr. Mariakakis&rsquo; work broadly identifies applications of machine learning and computer vision on sensor data for human-centered issues.</p>
+          </div>
+          <div class="card card--team">
+            <img class="avatar" src="Images/e9893-jake-tran-400x533-1.jpg" alt="Jake Tran" loading="lazy" />
+            <h3>Jake Tran</h3>
+            <p class="card__role">President &amp; CEO, Toronto Grace Health Centre</p>
+            <p class="card__bio">Mr. Tran has experience in complex continuing care, transitional care, wound care, respiratory care, and mental health programs.</p>
+          </div>
+          <div class="card card--team">
+            <img class="avatar" src="Images/alice.jpeg" alt="Alice Tu" loading="lazy" />
+            <h3>Alice Tu</h3>
+            <p class="card__role">Clinical Research Coordinator, University Health Network</p>
+            <p class="card__bio">Ms. Tu&rsquo;s research focuses on COPD patient engagement and the use of technology in a healthcare setting to improve patient care.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> HOME. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

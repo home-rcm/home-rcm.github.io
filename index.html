@@ -10,7 +10,7 @@
 <body>
   <header class="site-header">
     <nav class="nav" aria-label="Primary">
-      <a href="#" class="nav__brand">HOME</a>
+      <a href="#top" class="nav__brand">HOME</a>
       <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
@@ -25,17 +25,22 @@
 
   <main>
     <section class="hero" id="top">
-      <div class="container">
-        <p class="hero__eyebrow">HOME</p>
-        <h1>Connected, Accessible Remote Monitoring &mdash; Brought Home</h1>
-        <p class="hero__lede">
-          We're building a remote clinical monitoring platform that helps patients and clinicians
-          detect health changes earlier, intervene sooner, and keep people healthier where they
-          live &mdash; at home.
-        </p>
-        <div class="hero__actions">
-          <a href="#about" class="btn btn--primary">Learn More</a>
-          <a href="#contact" class="btn btn--secondary">Get in Touch</a>
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="hero__eyebrow">HOME</p>
+          <h1>Connected, Accessible Remote Monitoring &mdash; Brought Home</h1>
+          <p class="hero__lede">
+            We're building a remote clinical monitoring platform that helps patients and clinicians
+            detect health changes earlier, intervene sooner, and keep people healthier where they
+            live &mdash; at home.
+          </p>
+          <div class="hero__actions">
+            <a href="#about" class="btn btn--primary">Learn More</a>
+            <a href="#contact" class="btn btn--secondary">Get in Touch</a>
+          </div>
+        </div>
+        <div class="hero__art" aria-hidden="true">
+          <img src="Images/aa0f4-digital-health.jpg" alt="" loading="lazy" />
         </div>
       </div>
     </section>
@@ -76,6 +81,16 @@
             </p>
           </div>
         </div>
+
+        <div class="partners">
+          <p class="partners__label">In partnership with</p>
+          <ul class="partners__list">
+            <li><img src="Images/44faa-uhn-logo-with-michener-5.png" alt="University Health Network" loading="lazy" /></li>
+            <li><img src="Images/810fe-shsc-logo-og-image-6.jpg" alt="Sunnybrook Health Sciences Centre" loading="lazy" /></li>
+            <li><img src="Images/9e50c-u-of-t-logo-blue-horiz-4.png" alt="University of Toronto" loading="lazy" /></li>
+            <li><img src="Images/90249-c9f528337c2639686bd242ea5145a468.jpg" alt="Toronto Grace Health Centre" loading="lazy" /></li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -86,22 +101,28 @@
           The HOME platform consists of a patient-facing app and a clinician dashboard that
           together enable seamless remote clinical monitoring.
         </p>
-        <div class="grid grid--2">
-          <div class="card">
-            <h3>For Patients</h3>
-            <p>
-              Patients can log daily symptoms and vital signs through a simple diary, while
-              connected wearable devices collect additional health data such as heart rate,
-              sleep, and activity &mdash; all from the comfort of home.
-            </p>
+
+        <div class="platform">
+          <div class="platform__art">
+            <img src="Images/charm-app.png" alt="Patient app showing a daily health diary" loading="lazy" />
           </div>
-          <div class="card">
-            <h3>For Clinicians</h3>
-            <p>
-              The clinician dashboard synthesizes this information, helping healthcare providers
-              identify early warning signs and intervene before conditions worsen &mdash;
-              supporting patients to stay healthier at home.
-            </p>
+          <div class="platform__cards">
+            <div class="card">
+              <h3>For Patients</h3>
+              <p>
+                Patients can log daily symptoms and vital signs through a simple diary, while
+                connected wearable devices collect additional health data such as heart rate,
+                sleep, and activity &mdash; all from the comfort of home.
+              </p>
+            </div>
+            <div class="card">
+              <h3>For Clinicians</h3>
+              <p>
+                The clinician dashboard synthesizes this information, helping healthcare providers
+                identify early warning signs and intervene before conditions worsen &mdash;
+                supporting patients to stay healthier at home.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -111,28 +132,33 @@
       <div class="container">
         <h2 class="section__title">Team</h2>
         <p class="section__intro">
-          Our team brings together clinicians, scientists, engineers, and patient partners.
+          Our team brings together clinicians, scientists, and engineers from partner
+          institutions across Toronto.
         </p>
         <div class="grid grid--4">
           <div class="card card--team">
-            <div class="avatar" aria-hidden="true"></div>
-            <h3>Name</h3>
-            <p class="card__role">Role / Title</p>
+            <img class="avatar" src="Images/05091-robert-wu-214p-4.jpg" alt="Robert Wu" loading="lazy" />
+            <h3>Robert Wu</h3>
+            <p class="card__role">Clinician Investigator, University Health Network</p>
+            <p class="card__bio">Focuses on the development and evaluation of information technology to improve patient care.</p>
           </div>
           <div class="card card--team">
-            <div class="avatar" aria-hidden="true"></div>
-            <h3>Name</h3>
-            <p class="card__role">Role / Title</p>
+            <img class="avatar" src="Images/68fde-andrea-gershon-1.png" alt="Andrea Gershon" loading="lazy" />
+            <h3>Andrea Gershon</h3>
+            <p class="card__role">Scientist, Sunnybrook Research Institute</p>
+            <p class="card__bio">Expertise in chronic disease outcomes and health system quality of care.</p>
           </div>
           <div class="card card--team">
-            <div class="avatar" aria-hidden="true"></div>
-            <h3>Name</h3>
-            <p class="card__role">Role / Title</p>
+            <img class="avatar" src="Images/e031e-alex-mariakakis-portrait.jpg" alt="Alex Mariakakis" loading="lazy" />
+            <h3>Alex Mariakakis</h3>
+            <p class="card__role">Assistant Professor, Computer Science, University of Toronto</p>
+            <p class="card__bio">Applies machine learning to sensor and mobile health data.</p>
           </div>
           <div class="card card--team">
-            <div class="avatar" aria-hidden="true"></div>
-            <h3>Name</h3>
-            <p class="card__role">Role / Title</p>
+            <img class="avatar" src="Images/e9893-jake-tran-400x533-1.jpg" alt="Jake Tran" loading="lazy" />
+            <h3>Jake Tran</h3>
+            <p class="card__role">President &amp; CEO, Toronto Grace Health Centre</p>
+            <p class="card__bio">Experienced leader in continuing care and remote monitoring programs.</p>
           </div>
         </div>
       </div>

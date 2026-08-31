@@ -22,6 +22,16 @@ const contactForm = document.getElementById("contactForm");
 if (contactForm) {
   contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
-    contactForm.reset();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    const subject = `Message from ${name} (${email})`;
+    const body = `${message}\n\n---\nSent via the HOME website\nName: ${name}\nEmail: ${email}`;
+
+    window.location.href = `mailto:rcmcop.network@gmail.com?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
   });
 }

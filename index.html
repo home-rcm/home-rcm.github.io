@@ -1,54 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HOME &mdash; Remote Clinical Monitoring</title>
-  <meta name="description" content="HOME is a research platform advancing connected, accessible remote clinical monitoring for better health at home." />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header class="site-header">
-    <nav class="nav" aria-label="Primary">
-      <a href="index.html" class="nav__brand">HOME</a>
-      <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav__menu" id="navMenu">
-        <li><a href="about.html">About</a></li>
-        <li><a href="platform.html">Platform</a></li>
-        <li><a href="team.html">Team</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+---
+layout: default
+---
 
-  <main>
-    <section class="hero" id="top">
-      <div class="container hero__inner">
-        <div class="hero__copy">
-          <p class="hero__eyebrow">HOME</p>
-          <h1>Connected, at-Home, Accessible Remote Monitoring</h1>
-          <p class="hero__lede">
-            MAIN BLURB ABOUT WHAT WE WANT TO DO
-          </p>
-          <div class="hero__actions">
-            <a href="about.html" class="btn btn--primary">Learn More</a>
-            <a href="contact.html" class="btn btn--secondary">Get in Touch</a>
-          </div>
-        </div>
-        <div class="hero__art" aria-hidden="true">
-          <img src="Images/aa0f4-digital-health.jpg" alt="" loading="lazy" />
-        </div>
+<section class="hero" id="top">
+  <div class="container hero__inner">
+    <div class="hero__copy">
+      <h1>Health Outpatient Monitoring Evaluation</h1>
+      <p class="hero__lede">
+        We want to create remote clinical monitoring that is available and accessible to everyone, enabling early detection and timely intervention to prevent complications and reduce avoidable emergency visits and hospitalizations.
+      </p>
+      <div class="hero__actions">
+        <a href="{{ site.baseurl }}/about" class="btn btn--primary">Learn More</a>
+        <a href="{{ site.baseurl }}/contact" class="btn btn--secondary">Get in Touch</a>
       </div>
-    </section>
-  </main>
+    </div>
+    <div class="hero__art" aria-hidden="true">
+      <img src="{{ site.baseurl }}/images/hero/digital-health.jpg" alt="" loading="lazy" />
+    </div>
+  </div>
+  </section>
 
-  <footer class="site-footer">
-    <p>&copy; <span id="year"></span> HOME. All rights reserved.</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+  <section class="section section--partners">
+    <div class="container">
+      <div class="partners">
+        <p class="partners__label">In partnership with</p>
+        <ul class="partners__list">
+          <li><img src="{{ site.baseurl }}/images/partners/uhn.png" alt="University Health Network" loading="lazy" /></li>
+          <li><img src="{{ site.baseurl }}/images/partners/shsc.jpg" alt="Sunnybrook Health Sciences Centre" loading="lazy" /></li>
+          <li><img src="{{ site.baseurl }}/images/partners/uoft.png" alt="University of Toronto" loading="lazy" /></li>
+        </ul>
+      </div>
+    </div>
+  </section>

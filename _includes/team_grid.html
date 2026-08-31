@@ -1,0 +1,21 @@
+{% assign grouped = site.data.team | group_by: "group" %}
+{% for group in grouped %}
+{% case group.name %}
+{% when "team" %}
+<h3 class="team-group__title">Core Team</h3>
+{% when "collaborator" %}
+<h3 class="team-group__title">Close Collaborators</h3>
+{% else %}
+<h3 class="team-group__title">{{ group.name }}</h3>
+{% endcase %}
+<div class="grid grid--3">
+  {% for member in group.items %}
+  <div class="card card--team">
+    <img class="avatar" src="/images/members/{{ member.image }}" alt="{{ member.name }}" loading="lazy" />
+    <h3>{{ member.name }}</h3>
+    <p class="card__role">{{ member.title }}</p>
+    <p class="card__bio">{{ member.bio }}</p>
+  </div>
+  {% endfor %}
+</div>
+{% endfor %}

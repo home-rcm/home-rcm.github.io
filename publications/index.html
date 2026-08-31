@@ -1,0 +1,36 @@
+---
+layout: page
+title: Publications
+---
+
+{% assign sorted_pubs = site.publications | sort: 'date' | reverse %}
+{% assign current_year = nil %}
+
+<section class="section" id="publications-top">
+  <div class="container">
+    <h2 class="section__title">Publications</h2>
+    <p class="section__intro">
+      Peer-reviewed journal articles, conference papers, and clinical abstracts from our team.
+    </p>
+
+    <div class="publications">
+      {% for pub in sorted_pubs %}
+      {% assign pub_year = pub.date | date: "%Y" %}
+      {% if pub_year != current_year %}
+      <h3 class="publications__year" id="year-{{ pub_year }}">{{ pub_year }}</h3>
+      {% assign current_year = pub_year %}
+      {% endif %}
+
+      <article class="publication">
+        <p class="publication__title">
+          <a href="{{ pub.link }}" target="_blank" rel="noopener">&ldquo;{{ pub.title }}&rdquo;</a>
+        </p>
+        <p class="publication__meta"><em>{{ pub.venue }},</em> {{ pub.date | date: "%B %Y" }}</p>
+        <p class="publication__authors">
+          {% include author_list.html authors=pub.authors %}
+        </p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

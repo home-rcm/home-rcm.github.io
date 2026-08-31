@@ -1,0 +1,11 @@
+{% capture author_list %}
+{% for author in include.authors %}
+{% assign member = site.data.team | where: "id", author | first %}
+{% if member %}
+<strong class="author-name--member">{{ member.name }}</strong>
+{% else %}
+{{ author }}
+{% endif %}{% if forloop.last %}{% else %}, {% endif %}
+{% endfor %}
+{% endcapture %}
+{{ author_list | strip_newlines }}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}</title>
+
+  {% include meta.html %}
+  <link rel="stylesheet" href="{{ site.baseurl }}/style.css" />
+  {{ page.extra_header }}
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a href="{{ site.baseurl }}/" class="nav__brand">HOME</a>
+      <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__menu" id="navMenu">
+        <li><a href="{{ site.baseurl }}/about">About</a></li>
+        <li><a href="{{ site.baseurl }}/platform">Platform</a></li>
+        <li><a href="{{ site.baseurl }}/team">Team</a></li>
+        <li><a href="{{ site.baseurl }}/publications">Publications</a></li>
+        <li><a href="{{ site.baseurl }}/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> HOME. All rights reserved.</p>
+  </footer>
+
+  <script src="{{ site.baseurl }}/script.js"></script>
+  {{ page.extra_js }}
+</body>
+</html>

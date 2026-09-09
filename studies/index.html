@@ -1,0 +1,74 @@
+---
+layout: page
+title: Studies
+---
+
+{% assign active_studies = site.studies | where: 'status', 'active' | sort: 'start_date' | reverse %}
+{% assign completed_studies = site.studies | where: 'status', 'completed' | sort: 'end_date' | reverse %}
+
+<section class="section" id="studies-top">
+  <div class="container">
+    <h2 class="section__title">Studies</h2>
+    <p class="section__intro">
+      Active and past research studies run by our team related to remote clinical monitoring.
+    </p>
+
+    <div class="studies">
+      {% for study in active_studies %}
+      <article class="study">
+        <div class="study__header">
+          <span class="study__badge study__badge--active">Active</span>
+          <p class="study__meta">{% if study.start_date %}Since {{ study.start_date | append: "-01" | date: "%B %Y" }}{% endif %}</p>
+        </div>
+        <h4 class="study__title">{{ study.title }}</h4>
+        <p class="study__summary">{{ study.description }}</p>
+        {% if study.inclusion_criteria and study.status != 'completed' %}
+        <p class="study__criteria">Inclusion criteria</p>
+        <ul class="study__criteria-list">
+          {% for criterion in study.inclusion_criteria %}
+          <li>{{ criterion }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        {% if study.materials %}
+        <div class="study__materials">
+          {% for material in study.materials %}
+          <a class="btn btn--primary" href="{{ site.baseurl }}/study_materials/{{ material.file }}" target="_blank" rel="noopener">{{ material.label }}</a>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </article>
+      {% endfor %}
+
+      {% for study in completed_studies %}
+      <article class="study">
+        <div class="study__header">
+          <span class="study__badge study__badge--completed">Completed</span>
+          <p class="study__meta">
+            {% if study.start_date %}{{ study.start_date | append: "-01" | date: "%B %Y" }}{% endif %}
+            {% if study.start_date and study.end_date %} – {% endif %}
+            {% if study.end_date %}{{ study.end_date | append: "-01" | date: "%B %Y" }}{% endif %}
+          </p>
+        </div>
+        <h4 class="study__title">{{ study.title }}</h4>
+        <p class="study__summary">{{ study.description }}</p>
+        {% if study.inclusion_criteria and study.status != 'completed' %}
+        <p class="study__criteria">Inclusion criteria</p>
+        <ul class="study__criteria-list">
+          {% for criterion in study.inclusion_criteria %}
+          <li>{{ criterion }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        {% if study.materials %}
+        <div class="study__materials">
+          {% for material in study.materials %}
+          <a class="btn btn--primary" href="{{ site.baseurl }}/study_materials/{{ material.file }}" target="_blank" rel="noopener">{{ material.label }}</a>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

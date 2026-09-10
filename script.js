@@ -30,7 +30,7 @@ if (contactForm) {
     const subject = `Message from ${name} (${email})`;
     const body = `${message}\n\n---\nSent via the HOME website\nName: ${name}\nEmail: ${email}`;
 
-    window.location.href = `mailto:rcmcop.network@gmail.com?subject=${encodeURIComponent(
+    window.location.href = `mailto:rcmnetwork.domrp@utoronto.ca?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(body)}`;
   });

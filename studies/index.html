@@ -30,13 +30,6 @@ title: Studies
           {% endfor %}
         </ul>
         {% endif %}
-        {% if study.materials %}
-        <div class="study__materials">
-          {% for material in study.materials %}
-          <a class="btn btn--primary" href="{{ site.baseurl }}/study_materials/{{ material.file }}" target="_blank" rel="noopener">{{ material.label }}</a>
-          {% endfor %}
-        </div>
-        {% endif %}
       </article>
       {% endfor %}
 
@@ -59,13 +52,6 @@ title: Studies
           <li>{{ criterion }}</li>
           {% endfor %}
         </ul>
-        {% endif %}
-        {% if study.materials %}
-        <div class="study__materials">
-          {% for material in study.materials %}
-          <a class="btn btn--primary" href="{{ site.baseurl }}/study_materials/{{ material.file }}" target="_blank" rel="noopener">{{ material.label }}</a>
-          {% endfor %}
-        </div>
         {% endif %}
       </article>
       {% endfor %}
